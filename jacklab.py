@@ -1,11 +1,10 @@
-option = {
-    "xAxis": {
-        "type": "category",
-        "data": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
-    },
-    "yAxis": {"type": "value"},
-    "series": [{"data": [820, 932, 901, 934, 1290, 1330, 1320], "type": "line"}],
-}
-st_echarts(
-    options=option, height="400px",
-)
+import streamlit as st
+import pandas as pd
+ 
+st.write("""
+# My first app
+Hello *world!*
+""")
+ 
+df = pd.read_csv("my_data.csv")
+st.line_chart(df)
